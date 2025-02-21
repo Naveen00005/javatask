@@ -141,10 +141,6 @@ stringList  =  getString(stringList  , numberStrings );
 System.out.print("\nEnter the string to find its index: ");
 String searchString = scanner.nextLine();
 printSearchResult(searchString, arrayTask.findIndex(stringList, searchString ));
-
-//printSearchResult(searchString, index);
-
-//System.out.println("The index of " + searchString + " is: " + index);
 System.out.println("ArrayList contents: " + stringList);
 System.out.println("Size of ArrayList: " + UtilTask.findSize(stringList)); 
 }catch (Exception e) {
@@ -196,11 +192,6 @@ System.out.print("\nEnter the string to find first and last positions: ");
 String duplicateString = scanner.nextLine();
 printSearchResult(duplicateString, arrayTask.findFirstIndex(stringList, duplicateString));
 printSearchResult(duplicateString, arrayTask.findLastIndex(stringList, duplicateString));
-
-//printSearchResult(duplicateString, firstIndex);
-//printSearchResult(duplicateString, lastIndex);
-//System.out.println("First position: " + firstIndex);
-//System.out.println("Last position: " + lastIndex);
 System.out.println("ArrayList contents: " + stringList);
 }catch (Exception e) {
 System.out.println("An error occurred: " + e.getMessage());

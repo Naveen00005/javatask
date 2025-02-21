@@ -363,7 +363,7 @@ int number = scanner.nextInt();scanner.nextLine();
 Map<String,String> map2 = UtilTask.createHashMap();
 System.out.println("Enter the number of key-value pairs to add:");
 int numbers = scanner.nextInt();scanner.nextLine();
- map = getString(map2,numbers);
+ map2 = getString(map2,numbers);
 System.out.println(" Before transfer ");
 System.out.println("HashMap in map one : " + map);
 System.out.println("HashMap in map two : " + map2);
