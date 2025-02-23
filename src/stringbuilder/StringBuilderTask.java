@@ -5,11 +5,11 @@ import utils.UtilTask;
 
 public class StringBuilderTask{
 
-
 public StringBuilder createStringBuilder(String initial){
 StringBuilder sb = new StringBuilder(initial);
 return sb;
 }
+
 public StringBuilder appendString(StringBuilder sb,String lengthOfTheWord) throws CustomExceptions {
 UtilTask.validateNullString(sb);
 UtilTask.validateNullString(lengthOfTheWord);
