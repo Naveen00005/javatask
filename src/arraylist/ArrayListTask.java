@@ -13,7 +13,7 @@ UtilTask.validateNullString(element);
 list.add(element);
 return list;
 }
-
+ 
 public int findIndex(List<Object> array, String searchString) throws CustomExceptions {
 UtilTask.validateNullString(searchString);
 return array.indexOf(searchString);
