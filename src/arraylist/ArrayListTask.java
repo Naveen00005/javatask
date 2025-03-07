@@ -14,6 +14,7 @@ list.add(element);
 return list;
 }
  
+
 public int findIndex(List<Object> array, String searchString) throws CustomExceptions {
 UtilTask.validateNull(array);
 UtilTask.validateNull(searchString);
