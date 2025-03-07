@@ -10,24 +10,24 @@ public class UtilTask{
 
 //stringbuilder
 
-public static void validateNullString(Object input)throws CustomExceptions {
+public static void validateNull(Object input)throws CustomExceptions {
 if (input == null) {
  throw new CustomExceptions("Input cannot be null.");
 }
 }
 
 public static int lengthOfTheString(String stringLength) throws CustomExceptions {
- validateNullString(stringLength);
+ validateNull(stringLength);
  return stringLength.length();
 }
 
 public static char[] convertIntoCharacterArray(String character) throws CustomExceptions {
- validateNullString(character);
+ validateNull(character);
  return character.toCharArray();
 }
 
 public static int getLength(StringBuilder sb) throws CustomExceptions{
- validateNullString(sb);
+ validateNull(sb);
  return sb.length();
 }
 
@@ -47,7 +47,7 @@ public static void validatePosition(int position, int length) throws CustomExcep
 //hashmap
 
 public static <K,V> int findSize(Map<K,V> hashmap) throws CustomExceptions  {
-validateNullString(hashmap); 
+validateNull(hashmap); 
 return hashmap.size();
 }
 
@@ -59,7 +59,7 @@ return map;
 //ArrayList
 
 public static <T> int findSize(List<T> arrayList)throws CustomExceptions{
-validateNullString(arrayList);
+validateNull(arrayList);
 return arrayList.size();
 }
 

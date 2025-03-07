@@ -37,7 +37,7 @@ public int numberOfOccurrences(String occurrences,char character)throws CustomEx
 
 
 public int greatestPosition(String greatest, char character) throws CustomExceptions {
-        UtilTask.validateNullString(greatest);
+        UtilTask.validateNull(greatest);
         int lastIndex = greatest.lastIndexOf(character);
         return lastIndex; 
     }
@@ -56,32 +56,32 @@ return character.substring(0, position);
 }
 
 public String replaceCharacters(String character,String replace,int num)throws CustomExceptions{
-	UtilTask.validateNullString(character);
-	UtilTask.validateNullString(replace);
+	UtilTask.validateNull(character);
+	UtilTask.validateNull(replace);
 	    String remaining = character.substring(num);
 	    return replace + remaining;
 
 }
 
 public boolean startsWith(String character,String start) throws CustomExceptions{
- UtilTask.validateNullString(character);
- UtilTask.validateNullString(start);
+ UtilTask.validateNull(character);
+ UtilTask.validateNull(start);
 return character.startsWith(start);
 } 
 
 public boolean endsWith(String character,String end)throws CustomExceptions{
- UtilTask.validateNullString(character);
- UtilTask.validateNullString(end);
+ UtilTask.validateNull(character);
+ UtilTask.validateNull(end);
 return character.endsWith(end);
 }
 
 public String convertToUpperCase(String character)throws CustomExceptions{
- UtilTask.validateNullString(character);
+ UtilTask.validateNull(character);
 return character.toUpperCase();
 }
 
 public String convertToLowerCase(String character)throws CustomExceptions{
- UtilTask.validateNullString(character);
+ UtilTask.validateNull(character);
 return character.toLowerCase();
 }
 
@@ -99,42 +99,42 @@ public String reverseString(String stringToReverse) throws CustomExceptions {
 
 
 public String acceptMultipleStrings(String character)throws CustomExceptions{
- UtilTask.validateNullString(character);
+ UtilTask.validateNull(character);
 return character;
 }
 
 public String concatenateIndividualStrings(String input , String concatSymbol, String conSymbol )throws CustomExceptions{
- UtilTask.validateNullString(input);
+ UtilTask.validateNull(input);
 String[] concatenate = input.split(concatSymbol);
 return String.join(conSymbol , concatenate);
 }
 
 public String[] stringToArray(String character, String symbol)throws CustomExceptions{
- UtilTask.validateNullString(character);
+ UtilTask.validateNull(character);
 String[] words = character.split(symbol);
 return words;
 }
 
 public String mergeStrings(String[] input,String symbol)throws CustomExceptions{
- UtilTask.validateNullString(input);
- UtilTask.validateNullString(symbol);
+ UtilTask.validateNull(input);
+ UtilTask.validateNull(symbol);
 return String.join(symbol, input);
 }
 
 public boolean checkStringEquality(String input, String check)throws CustomExceptions{
- UtilTask.validateNullString(input);
- UtilTask.validateNullString(check);
+ UtilTask.validateNull(input);
+ UtilTask.validateNull(check);
 return input.equals(check);
 }
 
 public boolean checkStringEqualityIgnoreCase(String character, String ignoreCase)throws CustomExceptions{
- UtilTask.validateNullString(character);
- UtilTask.validateNullString(ignoreCase);
+ UtilTask.validateNull(character);
+ UtilTask.validateNull(ignoreCase);
 return character.equalsIgnoreCase(ignoreCase);
 }
 
 public String trimString(String character)throws CustomExceptions{
-UtilTask.validateNullString(character);
+UtilTask.validateNull(character);
 return character.trim();
 }
 }

@@ -174,15 +174,6 @@ System.out.println("Enter the symbol to append inbetween the string : ");
 String symbolsHash = scanner.nextLine();
 StringBuilder sb6 =  builderTask.createStringBuilder("");
 sb6 = buildStringWithSymbols(scanner, builderTask, sb6 , noOfString , symbolsHash );
-/*for (int i = 0; i < noOfString ; i++) {
-System.out.print("Enter STRING " + (i + 1) + " to append : " );
-String index = scanner.nextLine();
-if(i == noOfString-1){
-builderTask.appendString(sb6,index);
-}else{
-builderTask.appendStringWithSymbol(index, sb6,symbolsHash);
-}
-}*/
 System.out.println("The length of the original StringBuilder: " + UtilTask.getLength(sb6));
 int firstSymbol=builderTask.indexOfFirstSymbol(sb6,symbolsHash);
 System.out.println("First index position "+ symbolsHash +" is : " + firstSymbol);
@@ -199,17 +190,6 @@ System.out.println("Enter the symbol to append inbetween the string : ");
 String symbolsToFind = scanner.nextLine();
 StringBuilder sb7 =  builderTask.createStringBuilder("");
 sb7 = buildStringWithSymbols(scanner, builderTask, sb7 , numberOfString , symbolsToFind );
-/*
-for (int i = 0; i < numberOfString ; i++) {
-System.out.print("Enter STRING " + (i + 1) + " to append : " );
-String index1 = scanner.nextLine();
-if(i == numberOfString-1){
-builderTask.appendString(sb7,index1);
-}else{
-builderTask.appendStringWithSymbol(index1, sb7,symbolsToFind);
-}
-}
-*/
 System.out.println("The length of the original StringBuilder: " + UtilTask.getLength(sb7));
 int lastSymbol=builderTask.indexOfLastSymbol(sb7,symbolsToFind);
 System.out.println("Last index position "+ symbolsToFind +" is : " + lastSymbol);
