@@ -1,5 +1,4 @@
 package arraylist;
-import java.util.Iterator;
 import java.util.List;
 
 import utils.CustomExceptions;
@@ -22,20 +21,11 @@ return array.indexOf(searchString);
 
 public List<Object> iterator (List<Object> array) throws CustomExceptions {
 UtilTask.validateNull(array);
-List<Object> stringLists =  UtilTask.createArrayList();
-Iterator<Object> it = array.iterator();
-while (it.hasNext()) {
-stringLists.add(it.next()); 
-}
-return stringLists;
+return array;
 }
 
 public Object getStringAtIndex(List<Object> array, int index) throws CustomExceptions {
-UtilTask.validateNull(array);
-int size = UtilTask.findSize(array);
-if (index < 0 || index >= size) {
-throw new CustomExceptions("Invalid index. Index should be between 0 and " + ( size - 1));
-}
+UtilTask.validatePositionInList(array, index);
 return array.get(index);
 }
 
@@ -53,34 +43,26 @@ return array.lastIndexOf(str);
 }
  
 public List<Object> addStringAtPosition(List<Object> array, String str, int position) throws CustomExceptions {
-UtilTask.validateNull(array);
 UtilTask.validateNull(str);
-if (position >= 0 || position <= UtilTask.findSize(array)) {
- array.add(position, str);
-}
+UtilTask.validatePositionInList(array, position);
+array.add(position, str);
 return array;
 }
 
 public List<Object> addInSecondArrayList(List<Object> array, int initial, int end) throws CustomExceptions{
-UtilTask.validateNull(array);
-List<Object> secondArrayList = UtilTask.createArrayList();
-for (int i=initial;i<=end;i++){
-secondArrayList.add(array.get(i));
-}
-return secondArrayList ;
+UtilTask.validateIndices(initial, end, UtilTask.findSize(array));
+return array.subList(initial, end + 1);
 }
 
 public List<Object> mergeArrayLists(List<Object> first, List<Object> second) throws CustomExceptions {
 UtilTask.validateNull(first);
 UtilTask.validateNull(second);
-List<Object> mergedArrayList = UtilTask.createArrayList();
-mergedArrayList.addAll(first);
-mergedArrayList.addAll(second);
-return mergedArrayList ;
+first.addAll(second);
+return first;
 }
 
 public List<Object> removeDecimalAtPosition(List<Object> array, int position) throws CustomExceptions {
-UtilTask.validateNull(array);
+UtilTask.validatePositionInList(array, position);
 array.remove(position);
 return array;
 }

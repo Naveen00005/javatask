@@ -156,9 +156,7 @@ List<Object> stringLists =  UtilTask.createArrayList();
 stringLists =  getString(stringLists, numberOfStrings );
 System.out.println("Using Iterator to print");
 List<Object> it = arrayTask.iterator(stringLists);
-System.out.println(it);
-System.out.println("Using for loop to print");
-for (Object obj : stringLists) {
+for (Object obj : it) {
 System.out.println(obj);
 }
 }catch (Exception e) {
@@ -247,9 +245,9 @@ List<Object> secondArrayList =  UtilTask.createArrayList();
 secondArrayList =  getString(secondArrayList , numberStrings );
 System.out.println("First ArrayList: " + firstArrayList );
 System.out.println("Second ArrayList: " + secondArrayList);
-List<Object> thirdArrayList = arrayTask.mergeArrayLists(firstArrayList,secondArrayList );
-System.out.println("Merged ArrayList: " + thirdArrayList);
-System.out.println("Merged ArrayList size: " + UtilTask.findSize(thirdArrayList));
+List<Object> secondToFirst = arrayTask.mergeArrayLists(firstArrayList,secondArrayList );
+System.out.println("Merged ArrayList: " + secondToFirst);
+System.out.println("Merged ArrayList size: " + UtilTask.findSize(secondToFirst));
 }catch (Exception e) {
 System.out.println("An error occurred: " + e.getMessage());
 }
