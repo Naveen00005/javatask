@@ -70,7 +70,7 @@ return array;
 
 public static void validatePositionInList(List<?> array, int position) throws CustomExceptions {
 int size = findSize(array);
-if (position < 0 || position >= size) {
+if (position < 0 || position > size) {
 throw new CustomExceptions("Invalid position. It should be between 0 and " + (size - 1));
 }
 }

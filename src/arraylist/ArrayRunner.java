@@ -204,7 +204,7 @@ List<Object> stringList =  UtilTask.createArrayList();
 stringList =  getString(stringList, numStrings );
 System.out.print("Enter the string you want to add: ");
 String newString = scanner.nextLine();
-System.out.print("Enter the index position where you want to insert the string: ");
+System.out.print("Enter the position where you want to insert the string: ");
 int position = scanner.nextInt();scanner.nextLine();
 stringList = arrayTask.addStringAtPosition(stringList, newString, position);
 System.out.println("Updated ArrayList: " + stringList);
