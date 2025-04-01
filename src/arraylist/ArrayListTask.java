@@ -25,7 +25,7 @@ return array;
 }
 
 public Object getStringAtIndex(List<Object> array, int index) throws CustomExceptions {
-UtilTask.validatePositionInList(array, index+1);
+UtilTask.validatePositionInList(array, index);
 return array.get(index);
 }
 
@@ -62,7 +62,7 @@ return first;
 }
 
 public List<Object> removeDecimalAtPosition(List<Object> array, int position) throws CustomExceptions {
-UtilTask.validatePositionInList(array, position+1);
+UtilTask.validatePositionInList(array, position);
 array.remove(position);
 return array;
 }
