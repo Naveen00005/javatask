@@ -51,7 +51,7 @@ return array;
 
 public List<Object> addInSecondArrayList(List<Object> array, int initial, int end) throws CustomExceptions{
 UtilTask.validateIndices(initial, end, UtilTask.findSize(array));
-return array.subList(initial, end + 1);
+return array.subList(initial, end +1);
 }
 
 public List<Object> mergeArrayLists(List<Object> first, List<Object> second) throws CustomExceptions {

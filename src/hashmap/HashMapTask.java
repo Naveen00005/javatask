@@ -26,8 +26,6 @@ return map.containsValue(value);
 }
 
 public String getValueByKey(Map<String, String> map, String key)  throws CustomExceptions {
-UtilTask.validateNull(map);
-UtilTask.validateNull(key);
 if (checkKeyExists(map, key)) {
 return "The value for the key \"" + key + "\" is: " + map.get(key);
  } else {
@@ -43,8 +41,6 @@ return map.getOrDefault(key, defaultValue);
 }
 
 public String removeKey(Map<String, String> map, String key) throws CustomExceptions {
-UtilTask.validateNull(map);
-UtilTask.validateNull(key);
 if (checkKeyExists(map,key)) {
 map.remove(key);
 return "Key \"" + key + "\" removed successfully." ;
@@ -62,8 +58,6 @@ return map;
 }
 
 public String replaceValue(Map<String, String> map, String key, String newValue) throws CustomExceptions {
-UtilTask.validateNull(map);
-UtilTask.validateNull(key);
 UtilTask.validateNull(newValue);
 if (checkKeyExists(map,key)) {
 map.replace(key, newValue);
@@ -74,8 +68,6 @@ throw new CustomExceptions ("Key \"" + key + "\" does not exist in the HashMap."
 }
 
 public Map<String, String> replaceValueIfMatch(Map<String, String> map, String key, String oldValue, String newValue) throws CustomExceptions {
-UtilTask.validateNull(map);
-UtilTask.validateNull(key);
 UtilTask.validateNull(oldValue);
 UtilTask.validateNull(newValue);
 if (checkKeyExists(map,key) && map.get(key).equals(oldValue)) {

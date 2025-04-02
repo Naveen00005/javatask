@@ -47,7 +47,6 @@ public static void validatePosition(int position, int length) throws CustomExcep
 //hashmap
 
 public static <K,V> int findSize(Map<K,V> hashmap) throws CustomExceptions  {
-validateNull(hashmap); 
 return hashmap.size();
 }
 

@@ -75,7 +75,7 @@ for(int i=0 ; i <  number ; i++){
  map = hashTask.putMapElement(map,key,value);
 }
 System.out.println(" Printing the hashmap :" + map );
-System.out.println(" Size of the hashmap : " + map.size());
+System.out.println(" Size of the hashmap : " + UtilTask.findSize(map));
 }catch (Exception e) {
 System.out.println("An error occurred: " + e.getMessage());
 scanner.nextLine();
@@ -95,7 +95,7 @@ for(int i=0 ; i <  number ; i++){
  map = hashTask.putMapElement(map,key,value);
 }
 System.out.println(" Printing the hashmap :" + map );
-System.out.println(" Size of the hashmap : " +  map.size());
+System.out.println(" Size of the hashmap : " +   UtilTask.findSize(map));
 } catch (Exception e) {
 System.out.println("An error occurred: " + e.getMessage());
 scanner.nextLine();
@@ -118,7 +118,7 @@ for (int i = 0; i < number; i++) {
  map = hashTask.putMapElement(map, key, customObject);
 }
 System.out.println(" Printing the hashmap :" + map );
-System.out.println(" Size of the hashmap : " +  map.size());
+System.out.println(" Size of the hashmap : " +  UtilTask.findSize(map));
 } catch (Exception e) {
 System.out.println("An error occurred: " + e.getMessage());
 scanner.nextLine();
