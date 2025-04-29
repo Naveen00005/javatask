@@ -1,4 +1,4 @@
-package task8;
+package basics;
 
 
 import java.lang.reflect.Constructor;
@@ -7,9 +7,10 @@ import java.time.ZonedDateTime;
 import java.util.Properties;
 import java.util.Scanner;
 import java.util.logging.Logger;
-import java.util.logging.Level;
 
-import task8.FileTask.RainbowColor;
+import basics.FileTask.RainbowColor;
+
+import java.util.logging.Level;
 
 public class FileRunner {
 public static void main(String[] args) {

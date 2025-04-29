@@ -1,8 +1,9 @@
 package utils;
 
-import java.util.HashMap;
+import java.lang.reflect.InvocationTargetException;
+//import java.util.HashMap;
 import java.util.Map;
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.List;
 
 
@@ -50,22 +51,25 @@ public static <K,V> int findSize(Map<K,V> hashmap) throws CustomExceptions  {
 return hashmap.size();
 }
 
-public static <K,V> Map<K,V> createHashMap(){
-Map<K,V> map = new HashMap<>();
+public static <K,V> Map<K,V> createHashMap() throws ClassNotFoundException,InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException{
+	Class<?> mapReflection = Class.forName("java.util.HashMap");
+Map<K,V> map = (Map<K,V>) mapReflection.getDeclaredConstructor().newInstance();
 return map;
 }
 
 //ArrayList
+public static <T> List<T> createArrayList()throws CustomExceptions, ClassNotFoundException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException{
+	Class<?> arrayReflection = Class.forName("java.util.ArrayList");
+	List<T> array =  (List<T>) arrayReflection.getDeclaredConstructor().newInstance();
+	return array;
+	}
 
 public static <T> int findSize(List<T> arrayList)throws CustomExceptions{
 validateNull(arrayList);
 return arrayList.size();
 }
 
-public static <T> List<T> createArrayList(){
-List<T> array = new ArrayList<>();
-return array;
-}
+
 
 public static void validatePositionInList(List<?> array, int position) throws CustomExceptions {
 int size = findSize(array);

@@ -7,69 +7,47 @@ public class HashMapTask {
 
 public <K, V> Map<K, V> putMapElement(Map<K, V> map, K key, V value) throws CustomExceptions {
 UtilTask.validateNull(map);
-UtilTask.validateNull(key);
-UtilTask.validateNull(value);
 map.put(key, value);
 return map;
 }
 
 public boolean checkKeyExists(Map<String, String> map, String key)  throws CustomExceptions {
 UtilTask.validateNull(map);
-UtilTask.validateNull(key);
 return map.containsKey(key);
 }
 
 public boolean checkValueExists(Map<String, String> map, String value)   throws CustomExceptions{
 UtilTask.validateNull(map);
-UtilTask.validateNull(value);
 return map.containsValue(value);
 }
 
 public String getValueByKey(Map<String, String> map, String key)  throws CustomExceptions {
-if (checkKeyExists(map, key)) {
-return "The value for the key \"" + key + "\" is: " + map.get(key);
- } else {
- throw new CustomExceptions ("The key \"" + key + "\" does not exist in the HashMap.");
-}
+return map.get(key);
 }
 
 public String getDefaultValue (Map<String, String> map, String key, String defaultValue) throws CustomExceptions {
 UtilTask.validateNull(map);
-UtilTask.validateNull(key);
-UtilTask.validateNull(defaultValue);
 return map.getOrDefault(key, defaultValue);
 }
 
 public String removeKey(Map<String, String> map, String key) throws CustomExceptions {
-if (checkKeyExists(map,key)) {
-map.remove(key);
-return "Key \"" + key + "\" removed successfully." ;
-} else {
- throw new CustomExceptions ("The key \"" + key + "\" does not exist in the HashMap.");
-}
+return map.remove(key);
 }
 
+
 public Map<String, String> removeKeyIfValueMatches(Map<String, String> map, String key, String value) throws CustomExceptions {
-UtilTask.validateNull(map);	
-UtilTask.validateNull(key);
-UtilTask.validateNull(value); 
+UtilTask.validateNull(map);
 map.remove(key, value);
 return map;
 }
 
 public String replaceValue(Map<String, String> map, String key, String newValue) throws CustomExceptions {
-UtilTask.validateNull(newValue);
-if (checkKeyExists(map,key)) {
-map.replace(key, newValue);
-return "Value for key \"" + key + "\" replaced successfully.";
-}else {
-throw new CustomExceptions ("Key \"" + key + "\" does not exist in the HashMap.");
-}
+UtilTask.validateNull(map);
+return map.replace(key, newValue);
 }
 
+
 public Map<String, String> replaceValueIfMatch(Map<String, String> map, String key, String oldValue, String newValue) throws CustomExceptions {
-UtilTask.validateNull(oldValue);
-UtilTask.validateNull(newValue);
 if (checkKeyExists(map,key) && map.get(key).equals(oldValue)) {
  map.replace(key, newValue);
 }

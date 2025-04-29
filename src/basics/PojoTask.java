@@ -1,4 +1,4 @@
-package task8;
+package basics;
 
 public class PojoTask {
 private String name;

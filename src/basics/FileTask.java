@@ -1,4 +1,4 @@
-package task8;
+package basics;
 
 import java.io.File;
 import java.io.FileWriter;

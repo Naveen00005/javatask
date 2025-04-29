@@ -1,4 +1,4 @@
-package task8;
+package basics;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

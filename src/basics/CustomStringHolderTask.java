@@ -1,4 +1,4 @@
-package task8;
+package basics;
 
 import utils.CustomExceptions;
 import utils.UtilTask;
