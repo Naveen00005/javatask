@@ -7,8 +7,7 @@ import java.time.ZonedDateTime;
 import java.util.Properties;
 import java.util.Scanner;
 import java.util.logging.Logger;
-
-import basics.FileTask.RainbowColor;
+import basics.EnumTask.RainbowColor;
 
 import java.util.logging.Level;
 
@@ -16,6 +15,7 @@ public class FileRunner {
 public static void main(String[] args) {
 Scanner scanner = new Scanner(System.in);
 FileTask filetask = new FileTask(); 
+DateTimeTask dateTimeTask = new DateTimeTask();
 final Logger LOGGER = Logger.getLogger(FileRunner.class.getName() );
 PropertiesTask propertytask = new PropertiesTask();
 
@@ -215,16 +215,16 @@ break;
 
 case 11:
 try {
-	LOGGER.info("Current DateTime: " + filetask.getCurrentDateTime());
-	LOGGER.info("Current Time in Millis: " + filetask.getCurrentTimeInMillis());
+	LOGGER.info("Current DateTime: " + dateTimeTask.getCurrentDateTime());
+	LOGGER.info("Current Time in Millis: " + dateTimeTask.getCurrentTimeInMillis());
 	LOGGER.info("Enter  time zone (e.g., America/New_York): ");
     String zone = scanner.nextLine();	
-    ZonedDateTime time = filetask.getTimeInZone(zone);
+    ZonedDateTime time = dateTimeTask.getTimeInZone(zone);
     LOGGER.info("Time in " + zone + ": " + time);
-    long millis = filetask.getCurrentTimeInMillis();
-    LOGGER.info("Weekday: " + filetask.getWeekDayFromMillis(millis));
-    LOGGER.info("Month: " + filetask.getMonthFromMillis(millis));
-    LOGGER.info("Year: " + filetask.getYearFromMillis(millis));
+    long millis = dateTimeTask.getCurrentTimeInMillis();
+    LOGGER.info("Weekday: " + dateTimeTask.getWeekDayFromMillis(millis));
+    LOGGER.info("Month: " + dateTimeTask.getMonthFromMillis(millis));
+    LOGGER.info("Year: " + dateTimeTask.getYearFromMillis(millis));
 }catch (Exception e) {
 	LOGGER.log(Level.SEVERE,e.getMessage());
 }

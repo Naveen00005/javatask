@@ -22,7 +22,8 @@ return map.containsValue(value);
 }
 
 public String getValueByKey(Map<String, String> map, String key)  throws CustomExceptions {
-return map.get(key);
+	UtilTask.validateNull(map);
+	return map.get(key);
 }
 
 public String getDefaultValue (Map<String, String> map, String key, String defaultValue) throws CustomExceptions {
@@ -31,6 +32,7 @@ return map.getOrDefault(key, defaultValue);
 }
 
 public String removeKey(Map<String, String> map, String key) throws CustomExceptions {
+	UtilTask.validateNull(map);
 return map.remove(key);
 }
 
@@ -69,4 +71,3 @@ return map;
 }
 
 }
-

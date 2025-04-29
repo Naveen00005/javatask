@@ -1,4 +1,4 @@
-package task8_reflection;
+package basics_reflection;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
