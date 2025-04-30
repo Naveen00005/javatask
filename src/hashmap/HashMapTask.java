@@ -49,14 +49,12 @@ map.replace(key, oldValue, newValue);
 return map;
 }	
 
-
 public Map<String, String> transferMap(Map<String, String> map,Map<String, String> map2)  throws CustomExceptions  {
 UtilTask.validateNull(map);
 UtilTask.validateNull(map2);
 map.putAll(map2);
 return map;
 }
-
 
 public Map<String, String>  removeAll(Map<String, String> map)  throws CustomExceptions  {
 UtilTask.validateNull(map);
