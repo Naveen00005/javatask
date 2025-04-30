@@ -165,8 +165,12 @@ int number = scanner.nextInt();scanner.nextLine();
  map = getString(map,number);
 System.out.print("Enter the key to check: ");
 String keyToCheck = scanner.nextLine();
-boolean exists = hashTask.checkKeyExists(map, keyToCheck);
-System.out.print(" The Entered the key : "+exists);
+String exists = hashTask.getValueByKey(map, keyToCheck);
+if (exists != null) {
+    System.out.println("The key exists in the HashMap. Associated value: " + exists);
+} else {
+    System.out.println("Key not found.");
+}
 } catch (Exception e) {
 System.out.println("An error occurred: " + e.getMessage());
 scanner.nextLine();

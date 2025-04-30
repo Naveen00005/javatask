@@ -1,6 +1,5 @@
 package hashmap;
 import java.util.Map;
-
 import utils.CustomExceptions;
 import utils.UtilTask;
 public class HashMapTask {
@@ -9,11 +8,6 @@ public <K, V> Map<K, V> putMapElement(Map<K, V> map, K key, V value) throws Cust
 UtilTask.validateNull(map);
 map.put(key, value);
 return map;
-}
-
-public boolean checkKeyExists(Map<String, String> map, String key)  throws CustomExceptions {
-UtilTask.validateNull(map);
-return map.containsKey(key);
 }
 
 public boolean checkValueExists(Map<String, String> map, String value)   throws CustomExceptions{
@@ -50,11 +44,11 @@ return map.replace(key, newValue);
 
 
 public Map<String, String> replaceValueIfMatch(Map<String, String> map, String key, String oldValue, String newValue) throws CustomExceptions {
-if (checkKeyExists(map,key) && map.get(key).equals(oldValue)) {
- map.replace(key, newValue);
-}
+UtilTask.validateNull(map); 
+map.replace(key, oldValue, newValue);
 return map;
-}
+}	
+
 
 public Map<String, String> transferMap(Map<String, String> map,Map<String, String> map2)  throws CustomExceptions  {
 UtilTask.validateNull(map);
