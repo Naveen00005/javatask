@@ -22,17 +22,24 @@ public ZonedDateTime getTimeInZone(String zoneId) {
 		    return ZonedDateTime.now(ZoneId.of(zoneId));
 		}
 		
-public String getWeekDayFromMillis(long millis) {
+public String getWeekDayFromMillis() {
 			LocalDate today = LocalDate.now();
 		    DayOfWeek dayOfWeek = today.getDayOfWeek();
 		    return dayOfWeek.toString();
 		   }
 		
-public String getMonthFromMillis(long millis) {
+/*
+public String getMonthFromMillis(long millis , String language) {
 		    Instant instant = Instant.ofEpochMilli(millis);
-		    return instant.atZone(ZoneId.systemDefault()).getMonth().getDisplayName(TextStyle.FULL, Locale.ENGLISH);
+		    return instant.atZone(ZoneId.systemDefault()).getMonth().getDisplayName(TextStyle.FULL, new Locale(language));
 		}
-		
+*/
+public String getMonthFromMillis(long millis, Locale language) {
+    Instant instant = Instant.ofEpochMilli(millis);
+    
+    return instant.atZone(ZoneId.systemDefault()).getMonth().getDisplayName(TextStyle.FULL, language);
+}
+
 public int getYearFromMillis(long millis) {
 		    Instant instant = Instant.ofEpochMilli(millis);
 		    return instant.atZone(ZoneId.systemDefault()).getYear();

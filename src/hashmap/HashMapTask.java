@@ -30,7 +30,6 @@ public String removeKey(Map<String, String> map, String key) throws CustomExcept
 return map.remove(key);
 }
 
-
 public Map<String, String> removeKeyIfValueMatches(Map<String, String> map, String key, String value) throws CustomExceptions {
 UtilTask.validateNull(map);
 map.remove(key, value);
@@ -41,7 +40,6 @@ public String replaceValue(Map<String, String> map, String key, String newValue)
 UtilTask.validateNull(map);
 return map.replace(key, newValue);
 }
-
 
 public Map<String, String> replaceValueIfMatch(Map<String, String> map, String key, String oldValue, String newValue) throws CustomExceptions {
 UtilTask.validateNull(map); 

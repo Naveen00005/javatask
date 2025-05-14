@@ -4,6 +4,7 @@ package basics;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import java.time.ZonedDateTime;
+import java.util.Locale;
 import java.util.Properties;
 import java.util.Scanner;
 import java.util.logging.Logger;
@@ -222,8 +223,9 @@ try {
     ZonedDateTime time = dateTimeTask.getTimeInZone(zone);
     LOGGER.info("Time in " + zone + ": " + time);
     long millis = dateTimeTask.getCurrentTimeInMillis();
-    LOGGER.info("Weekday: " + dateTimeTask.getWeekDayFromMillis(millis));
-    LOGGER.info("Month: " + dateTimeTask.getMonthFromMillis(millis));
+    LOGGER.info("Weekday: " + dateTimeTask.getWeekDayFromMillis());
+    Locale language = Locale.ENGLISH;
+   LOGGER.info("Month: " + dateTimeTask.getMonthFromMillis(millis , language));
     LOGGER.info("Year: " + dateTimeTask.getYearFromMillis(millis));
 }catch (Exception e) {
 	LOGGER.log(Level.SEVERE,e.getMessage());
