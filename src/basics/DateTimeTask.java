@@ -27,13 +27,7 @@ public String getWeekDayFromMillis() {
 		    DayOfWeek dayOfWeek = today.getDayOfWeek();
 		    return dayOfWeek.toString();
 		   }
-		
-/*
-public String getMonthFromMillis(long millis , String language) {
-		    Instant instant = Instant.ofEpochMilli(millis);
-		    return instant.atZone(ZoneId.systemDefault()).getMonth().getDisplayName(TextStyle.FULL, new Locale(language));
-		}
-*/
+
 public String getMonthFromMillis(long millis, Locale language) {
     Instant instant = Instant.ofEpochMilli(millis);
     
