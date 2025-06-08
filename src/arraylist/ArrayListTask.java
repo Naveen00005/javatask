@@ -1,5 +1,4 @@
 package arraylist;
-import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 import utils.CustomExceptions;
